@@ -728,7 +728,7 @@ header {
 @media (min-width: 501px) and (max-width: 800px) {
   /* Adjust the header height to make it appear properly on the first screen */
   .header {
-    height: 120vh;
+    height: 150vh;
   }
 
   /* Center-align the "Home Content" text on landscape screens */
@@ -748,7 +748,7 @@ header {
   
   /* Adjust the size of project images in the "Portfolio" section for landscape screens */
   .about-me {
-    height: 200vh; /* Reduce the height for smartphone landscape mode */
+    height: 250vh; /* Reduce the height for smartphone landscape mode */
     padding: 4rem 0; /* Adjust padding for smartphone landscape mode */
   }
 
@@ -837,4 +837,7 @@ header {
   .angle-down-icon .btn-box{
     width: 290px;
   }
+  .contact{
+  height:120vh;
+}
 }
