@@ -18,7 +18,7 @@ An interactive and responsive portfolio website that showcases your skills, proj
 
 ## Deployment
 
-You can view the live version of this portfolio website by following this link: [Portfolio Website](https://yourportfolio.com)
+You can view the live version of this portfolio website by following this link: [Portfolio Website](https://akc2531.github.io/MyPortfolio/)
 
 ## License
 
