@@ -1,0 +1,840 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html
+{
+  scroll-behavior:smooth ;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #ededed;
+}
+
+header {
+  background: url(../Images/sd.avif);
+  background-size:cover;
+  height: 120vh;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+
+/* ////........Navbar.......//// */
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 500;
+  background-color: #07374a;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.menu-items {
+  display: flex;
+}
+
+.menu-items li {
+  list-style: none;
+  padding: 1rem;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: #f0f0e6;
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
+.menu-items a:hover {
+  color: #0ef;
+  font-size: 1.04rem;
+  border-bottom: 2px solid #f0f0e6;
+}
+
+.navbar .logo {
+  order: 1;
+  color: #f0f0e6;
+  font-size: 2rem;
+}
+
+/* ////........Home Content........//// */
+.home-content{
+   position: sticky;
+  top: 50%;
+  left: 27%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+    max-width:600px ;
+    
+}
+.home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+.home-content h3:nth-of-type(2){
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+}
+#element{
+    color: #0ef;
+}
+.home-content h1{
+    font-size: 46px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .1s;
+}
+.home-content  p{
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+.btn-box{
+    position: absolute;
+    bottom: -40%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    padding: 12px 28px;
+    background:#0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef
+}
+.btn-box:hover{
+    box-shadow:0 0 5px cyan,
+    0 0 25px cyan,0 0 50px cyan,
+    0 0 100px cyan, 0 0 200px cyan
+}
+
+/* ////........About Me........//// */
+
+.about-me {
+  background-color: #07374a;
+  background-size: cover;
+  padding: 6rem 0;
+  height: 120vh;
+}
+
+.about-me .about-heading {
+  color: #25b79f;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.about-content img {
+  height: 200px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  color: #f0f0e6;
+  padding: 0 2.3rem;
+  text-align: center;
+}
+
+.skills .skills-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #25b79f;
+  text-align: center;
+}
+
+.about-me .about-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-content .left-content {
+  flex-basis: 45%;
+  text-align: center;
+}
+
+.about-content .right-content {
+  flex-basis: 45%;
+}
+
+/* ///.....Skill Bar....../// */
+
+.skills-bar {
+  padding: 25px 30px;
+}
+
+.skills-bar .bar {
+  margin: 25px 0;
+}
+
+.skills-bar .bar .info span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.skills-bar .bar .info {
+  margin-bottom: 8px;
+  color: #f0f0e6;
+}
+
+.skills-bar .bar .progress-line {
+  position: relative;
+  height: 10px;
+  width: 550px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.bar .progress-line span {
+  position: absolute;
+  background: #25b79f;
+  height: 100%;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.progress-line .html {
+  width: 80%;
+}
+.progress-line .css {
+  width: 70%;
+}
+.progress-line .bootstrap {
+  width: 50%;
+}
+.progress-line .javascript {
+  width: 50%;
+}
+.progress-line .java {
+  width: 90%;
+}
+
+.bar .progress-line span::before {
+  position: absolute;
+  content: "";
+  height: 0;
+  right: 0;
+  top: -12px;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-style: #f0f0f0;
+  border-top-color: #f0f0f0;
+}
+
+.bar .progress-line span::after {
+  position: absolute;
+  right: 0;
+  top: -28px;
+  color: #07374a;
+  font-size: 12px;
+  font-weight: 700;
+  background: #f0f0f0;
+  padding: 1px 8px;
+  border-radius: 3px;
+}
+
+.progress-line .html::after {
+  content: "80%";
+}
+.progress-line .css::after {
+  content: "70%";
+}
+.progress-line .bootstrap::after {
+  content: "50%";
+}
+.progress-line .javascript::after {
+  content: "50%";
+}
+.progress-line .java::after {
+  content: "90%";
+}
+
+.navbar.solid {
+  background-color: #07374a;
+  transition: background-color 1s ease 0s;
+  box-shadow: 0 0 4px rgb(7 55 74 / 20%);
+  z-index: 500;
+}
+
+.navbar.solid .navbar-brand {
+  display: inline-block;
+  color: #f0f0e6;
+  transition: color 1s ease 0s;
+}
+
+.navbar-brand {
+  display: none;
+  color: #f0f0e6;
+  font-weight: 400;
+}
+.work-arrow{
+    display: inline-block;
+    margin-top:25px;
+    padding: 12px 28px;
+    background:#0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef
+}
+.work-arrow:hover{
+    box-shadow:0 0 5px cyan,
+    0 0 25px cyan,0 0 50px cyan,
+    0 0 100px cyan, 0 0 200px cyan
+}
+/* ////.....Portfolio......///// */
+
+.portfolio {
+  background: #25b79f;
+  padding: 6rem 0;
+}
+
+.proj-heading h1 {
+  text-align: center;
+  color: #07374a;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin: 3rem 0;
+}
+
+.proj-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.proj-1 img {
+  height: 330px;
+  width: 380px;
+  object-fit: cover;
+  border-radius: 20%;
+  box-shadow: 0 20px 10px -10px rgb(37 41 52 / 31%);
+  margin-right: 1.7rem;
+}
+
+.proj-1 .proj1-details {
+  width: 32rem;
+}
+
+
+.proj-1 .proj1-details h2 {
+  font-size: 2rem;
+  color: #07374a;
+}
+
+/* ////.....proj2.....//// */
+
+.proj-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.proj-2 img {
+  height: 330px;
+  width: 380px;
+  object-fit: cover;
+  border-radius: 20%;
+  box-shadow: 0 20px 10px -10px rgb(37 41 52 / 31%);
+  margin-right: 1.7rem;
+}
+
+.proj-2 .proj2-details {
+  width: 32rem;
+}
+
+.proj-2 .proj2-details h2 {
+  font-size: 2rem;
+  color: #07374a;
+}
+.proj-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6rem;
+}
+.proj-3 img {
+  height: 330px;
+  width: 380px;
+  object-fit: cover;
+  border-radius: 20%;
+  box-shadow: 0 20px 10px -10px rgb(37 41 52 / 31%);
+  margin-right: 1.7rem;
+}
+
+.proj-3 .proj3-details {
+  width: 32rem;
+}
+
+.proj-3 .proj3-details h2 {
+  font-size: 2rem;
+  color: #07374a;
+}
+.more-work {
+  text-align: center;
+  margin: 3rem 0 1rem 0;
+}
+
+.more-work p {
+  font-size: 1.6rem;
+  color: #07374a;
+  font-weight: 500;
+}
+
+.more-work a {
+  text-decoration: none;
+  color: #f0f0e6;
+  font-size: 1.3rem;
+}
+
+.more-work a:hover {
+  border-bottom: 2px solid #f0f0e6;
+  font-size: 1.04rem;
+  color:#0ef;
+}
+
+/* ////......Contact......///// */
+
+.contact {
+  background: #07374a;
+  position: relative;
+  height: 92vh;
+}
+
+.contact-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.contact-content h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #25b79f;
+  padding-bottom: 0.5rem;
+}
+
+.contact-content .mail {
+  color: #f0f0e6;
+  padding-bottom: 0.2rem;
+  font-size: 1rem;
+}
+
+.contact-content .links {
+  color: #25b79f;
+  padding: 0.5rem;
+  padding-bottom: 1.8rem;
+  font-size: 1rem;
+}
+
+.contact-content a {
+  text-decoration: none;
+  color: #25b79f;
+  padding: 0.5rem;
+  transition: 0.3s ease-in-out;
+}
+
+.contact-content a:hover {
+  color: #f0f0e6;
+}
+
+
+@keyframes slideTop{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translatY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translatY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+.contact .angle-down-icon{
+      position: absolute;
+     top: 90%;
+      left: 50%;
+   text-align: center;
+}
+.contact .angle-down-icon .btn-box{
+ width:290px;
+}
+
+
+
+/* Media query for small screens (max-width: 500px) */
+/* Media query for small screens (max-width: 500px) */
+@media (max-width: 500px) {
+  
+  html {
+    font-size: 60%;
+  }
+
+  /* Adjust the header height to make it appear properly on the first screen */
+  .header {
+    height: 120vh;
+    padding: 0;
+    background-size: cover;
+  }
+
+  /* Center-align the "Home Content" text on smaller screens */
+  .home-content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  /* Modify the size of the "Home Content" elements */
+  .home-content h1 {
+    font-size: 16px;
+  }
+
+  /* Make adjustments to the "About Me" section */
+  .about-content .left-content,
+  .about-content .right-content {
+    flex-basis: 100%;
+  }
+
+  /* Adjust the width of the "Skills" section */
+  .skills {
+    width: 100%;
+  }
+
+  /* Center-align the "Skills" text */
+  .left-content h1 {
+    margin-top: 3.2rem;
+    text-align: center;
+  }
+
+  /* Hide the "Work Arrow" */
+  .work-arrow {
+    display: none;
+  }
+
+  /* Adjust the size of project images in the "Portfolio" section */
+  .proj-1 img,
+  .proj-2 img {
+    height: 230px;
+    width: 290px;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Hide the "Work Arrow 2" */
+  .work-arrow-2 a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #25b79f;
+    display: block;
+    text-align: center;
+  }
+
+  /* Adjust the "Contact" section width */
+  .contact-content {
+    width: 100%;
+  }
+
+  /* Remove margins and padding to occupy the full space */
+
+
+  /* Ensure that the navbar displays all options and aligns to the left */
+
+  .navbar {
+    width: 100%;
+    z-index: 400;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+  }
+  .skills-bar {
+    padding: 15px 20px; /* Adjust padding for smaller screens */
+  }
+
+  .skills-bar .bar {
+    margin: 15px 0; /* Adjust margins for smaller screens */
+  }
+
+  .skills-bar .bar .info span {
+    font-size: 0.9rem; /* Reduce font size for smaller screens */
+  }
+
+  .skills-bar .bar .info {
+    margin-bottom: 6px; /* Adjust margins for smaller screens */
+    color: #f0f0e6;
+  }
+
+  .skills-bar .bar .progress-line {
+    width: 100%; /* Make the progress line full width for smaller screens */
+  }
+
+  .progress-line .html::after,
+  .progress-line .css::after,
+  .progress-line .bootstrap::after,
+  .progress-line .javascript::after,
+  .progress-line .java::after {
+    font-size: 0.8rem; /* Reduce font size for smaller screens */
+  }  
+
+.portfolio {
+  background: #25b79f;
+  padding: 2rem 0; /* Reduce the padding for smaller screens */
+}
+
+.proj-heading h1 {
+  text-align: center;
+  color: #07374a;
+  font-size: 1.8rem; /* Reduce font size for smaller screens */
+  font-weight: 700;
+  margin: 2rem 0; /* Adjust margin for smaller screens */
+}
+
+.proj-1,
+.proj-2,
+.proj-3 {
+  display: block; /* Change to a block-level element for stacking */
+  margin: 2rem 0; /* Adjust margin for smaller screens */
+}
+
+.proj-1 img,
+.proj-2 img,
+.proj-3 img {
+  width: 100%; /* Make images full-width for smaller screens */
+  max-width: 100%; /* Ensure the images don't exceed the screen width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 25; /* Remove border radius for smaller screens */
+  box-shadow: none; /* Remove box shadow for smaller screens */
+  margin-right: 0; /* Remove right margin for smaller screens */
+}
+
+.proj-1 .proj1-details,
+.proj-2 .proj2-details,
+.proj-3 .proj3-details {
+  width: 100%; /* Make details full-width for smaller screens */
+  text-align: center; /* Center-align text for smaller screens */
+}
+
+.proj-1 .proj1-details h2,
+.proj-2 .proj2-details h2,
+.proj-3 .proj3-details h2 {
+  font-size: 1.6rem; /* Reduce font size for smaller screens */
+  color: #07374a;
+}
+
+.more-work {
+  text-align: center;
+  margin: 2rem 0; /* Adjust margin for smaller screens */
+}
+
+.more-work p {
+  font-size: 1.2rem; /* Reduce font size for smaller screens */
+  color: #07374a;
+  font-weight: 500;
+}
+
+.more-work a {
+  text-decoration: none;
+  color: #f0f0e6;
+  font-size: 1.1rem; /* Reduce font size for smaller screens */
+}
+
+.more-work a:hover {
+  border-bottom: 2px solid #f0f0e6;
+  font-size: 1.04rem;
+  color: #0ef;
+}
+.contact .angle-down-icon {
+  top: 80%; /* Adjust the vertical position for smaller screens */
+}
+.angle-down-icon .btn-box {
+  width: 200px; /* Adjust the width for smaller screens */
+  font-size:1rem;
+}
+}
+/* Landscape Mode Styles (Between 500px and 800px) */
+@media (min-width: 501px) and (max-width: 800px) {
+  /* Adjust the header height to make it appear properly on the first screen */
+  .header {
+    height: 120vh;
+  }
+
+  /* Center-align the "Home Content" text on landscape screens */
+  .home-content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  /* Modify the size of the "Home Content" elements for landscape screens */
+  .home-content h1 {
+    font-size: 24px;
+  }
+  /* Make adjustments to the "About Me" section for landscape screens */
+  
+  /* Adjust the size of project images in the "Portfolio" section for landscape screens */
+  .about-me {
+    height: 200vh; /* Reduce the height for smartphone landscape mode */
+    padding: 4rem 0; /* Adjust padding for smartphone landscape mode */
+  }
+
+  .about-me .about-heading {
+    font-size: 1.8rem; /* Reduce font size for smartphone landscape mode */
+    text-align: left;
+  }
+
+  .about-content img {
+    height: 150px; /* Adjust image height for smartphone landscape mode */
+    width: 120px; /* Adjust image width for smartphone landscape mode */
+  }
+
+  .about-content p {
+    font-size: 0.9rem; /* Reduce font size for smartphone landscape mode */
+    padding: 0 1rem; /* Adjust padding for smartphone landscape mode */
+    text-align: left;
+    flex:1;
+  }
+
+  .skills .skills-heading {
+    font-size: 1.8rem; /* Reduce font size for smartphone landscape mode */
+    text-align:right;
+  }
+
+  .about-me .about-content {
+    display: flex;
+    flex-direction: column; /* Stack content in smartphone landscape mode */
+  }
+
+  .about-content .left-content,
+  .about-content .right-content {
+    flex-basis: 100%; /* Adjust content width for smartphone landscape mode */
+    text-align: left;
+  }
+
+  /* Adjust the Skill Bar */
+  .skills-bar {
+    padding: 15px 20px; /* Adjust padding for smartphone landscape mode */
+  }
+
+  .skills-bar .bar {
+    margin: 15px 0; /* Adjust margins for smartphone landscape mode */
+  }
+
+  .skills-bar .bar .info span {
+    font-size: 0.9rem; /* Reduce font size for smartphone landscape mode */
+  }
+
+  .skills-bar .bar .info {
+    margin-bottom: 6px; /* Adjust margins for smartphone landscape mode */
+  }
+
+  .skills-bar .bar .progress-line {
+    width: 100%; /* Make the progress line full width for smartphone landscape mode */
+  }
+
+  .bar .progress-line span::before {
+    right: 0;
+    top: -12px;
+    border-top-width: 7px;
+    border-top-color: #f0f0f0;
+  }
+
+  .bar .progress-line span::after {
+    right: 0;
+    top: -28px;
+  }
+
+  .progress-line .html::after,
+  .progress-line .css::after,
+  .progress-line .bootstrap::after,
+  .progress-line .javascript::after,
+  .progress-line .java::after {
+    font-size: 12px;
+  }
+
+
+  .contact .angle-down-icon{
+    top: 100%;
+  }
+  .contact .angle-down-icon .btn-box{
+    width: 290px;
+    font-size: 12px;
+  }
+  .angle-down-icon .btn-box{
+    width: 290px;
+  }
+}
